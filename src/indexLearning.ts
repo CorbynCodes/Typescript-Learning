@@ -49,3 +49,14 @@ type User = {
 };
 type userRole = "guest" | "admin" | "moderator";
 let userRole: userRole = "guest";
+
+// Type narrowing
+function displayUserRole(user: string | number) {
+  if (user === "guest") {
+    console.log("Guest User");
+  } else if (user === "admin") {
+    console.log("Admin User");
+  } else if (user === "moderator") {
+    console.log("Moderator User");
+  }
+}
